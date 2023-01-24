@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "703800474542",
+    "project_id": "lec-recorder",
+    "storage_bucket": "lec-recorder.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703800474542:android:4a4863567caf94d6d6663f",
+        "android_client_info": {
+          "package_name": "com.example.lecrecorder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "703800474542-o91ruh51d493epa4n9fm651kqtuo34li.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBp1CkkfS_HBTTI9CdsMaMOnF_Ttr7PtB4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "703800474542-o91ruh51d493epa4n9fm651kqtuo34li.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

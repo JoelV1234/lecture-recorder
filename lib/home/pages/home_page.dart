@@ -2,21 +2,24 @@
 
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:lecrecorder/api/pdf_api.dart';
+import 'package:flutter_audio_recorder3/flutter_audio_recorder3.dart';
+import 'package:lecrecorder/api/firebase_api.dart';
+import 'package:lecrecorder/utils/file.dart';
 import 'package:lecrecorder/utils/getters.dart';
 
-class StartPage extends StatefulWidget {
-  const StartPage({Key? key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
-  State<StartPage> createState() => _StartPageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _StartPageState extends State<StartPage> {
+class _HomePageState extends State<HomePage> {
   void pdfFile() async {
-    File? file = await PDFApi.pickFile();
-    if (file != null) {
-      getLecDataProvider(context).reset(file);
+    File? file = await pickFile();
+    bool? hasPermission = await FlutterAudioRecorder3.hasPermissions;
+    if (file != null && hasPermission == true) {
+      await getLecDataProvider(context).reset(file);
       Navigator.pushNamed(context, '/recorder');
     }
   }

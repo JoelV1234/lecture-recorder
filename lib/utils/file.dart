@@ -1,15 +1,10 @@
 import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 
-class PDFApi {
-  
-  static Future<File?> pickFile() async {
+Future<File?> pickFile() async {
     final result = await FilePicker.platform.pickFiles(
       type: FileType.custom,
-      allowedExtensions: ['pdf'],
+      allowedExtensions: ['pdf', 'mp4', 'm4a'],
     );
-
     return result == null ? null : File(result.paths.first!);
   }
-
-}

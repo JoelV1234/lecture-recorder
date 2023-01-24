@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:lecrecorder/api/firebase_api.dart';
+import 'package:lecrecorder/api/recorder_provider.dart';
 import 'package:lecrecorder/providers/lec_data_provider.dart';
 import 'package:lecrecorder/utils/getters.dart';
 
